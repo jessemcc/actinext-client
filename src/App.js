@@ -10,9 +10,11 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/activities").then((response) => {
-      setData(response.data);
-    });
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/activities`)
+      .then((response) => {
+        setData(response.data);
+      });
   }, []);
 
   return (

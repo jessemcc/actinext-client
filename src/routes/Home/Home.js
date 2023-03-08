@@ -35,7 +35,11 @@ function Home(props) {
           Welcome to <span className="actinext-title">ActiNext</span>
         </h1>
         <div className="hero__container">
-          <img className="hero__image" src={currentActivity.image} alt="" />
+          <img
+            className="hero__image"
+            src={process.env.REACT_APP_API_URL + currentActivity.image}
+            alt=""
+          />
         </div>
         <p className="hero__use">
           To use ActiNext, simply click on "Generate Activity". All activities

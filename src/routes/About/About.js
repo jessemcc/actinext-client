@@ -1,6 +1,7 @@
 import "./About.scss";
 
 function About() {
+  document.title = `Actinext`;
   return (
     <div className="section section--about">
       <div className="about-wrap">

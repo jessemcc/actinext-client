@@ -5,6 +5,7 @@ import axios from "axios";
 function Home(props) {
   const [activities, setActivities] = useState(props.data);
   const [currentActivity, setCurrentActivity] = useState([]);
+  console.log(process.env.REACT_APP_API_URL);
 
   useEffect(() => {
     const getActivities = async () => {
